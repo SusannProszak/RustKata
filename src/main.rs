@@ -1,5 +1,8 @@
 fn prime_factors(num: i64) -> Vec<i64> {
-    vec![]
+	match num {
+	    1 => vec![],
+	    _ => vec![num]
+	}
 }
 
 #[test]
