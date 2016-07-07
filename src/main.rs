@@ -14,3 +14,13 @@ fn test_prime_factors_one() {
 fn test_prime_factors_two() {
     assert_eq!(prime_factors(2), [2]);
 }
+
+#[test]
+fn test_prime_factors_three() {
+    assert_eq!(prime_factors(3), [3]);
+}
+
+#[test]
+fn test_prime_factors_four() {
+    assert_eq!(prime_factors(4), [2,2]);
+}
