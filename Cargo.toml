@@ -1,0 +1,6 @@
+[package]
+name = "kata"
+version = "0.1.0"
+authors = ["Susann Proszak <s.proszak@gmail.com>"]
+
+[dependencies]
