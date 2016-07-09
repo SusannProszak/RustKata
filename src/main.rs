@@ -34,3 +34,8 @@ fn test_prime_factors_three() {
 fn test_prime_factors_four() {
     assert_eq!(prime_factors(4), [2,2]);
 }
+
+#[test]
+fn test_prime_factors_six() {
+    assert_eq!(prime_factors(6), [2,3]);
+}
