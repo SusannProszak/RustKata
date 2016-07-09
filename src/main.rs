@@ -47,3 +47,8 @@ fn test_prime_factors_six() {
 fn test_prime_factors_eight() {
     assert_eq!(prime_factors(8), [2,2,2]);
 }
+
+#[test]
+fn test_prime_factors_nine() {
+    assert_eq!(prime_factors(9), [3,3]);
+}
