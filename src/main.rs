@@ -2,16 +2,19 @@
 fn prime_factors(num: i32) -> Vec<i32> {
 
 	let mut prime_factors = Vec::new();
+	let mut n = num;
 
-	if num % 2 == 0 && num > 2 {
-        prime_factors.push(2);
-        let n = num / 2;
-        if n > 1 {
-        	prime_factors.push(n)
+	if n > 1 {
+		while n % 2 == 0 {
+        	prime_factors.push(2);
+        	n = n / 2;
+    	}
+
+    	if n > 1 {
+        	prime_factors.push(n);
         }
-    } else if num > 1 {
-        prime_factors.push(num)
-    }
+	}
+
 	prime_factors
 }
 
@@ -38,4 +41,9 @@ fn test_prime_factors_four() {
 #[test]
 fn test_prime_factors_six() {
     assert_eq!(prime_factors(6), [2,3]);
+}
+
+#[test]
+fn test_prime_factors_eight() {
+    assert_eq!(prime_factors(8), [2,2,2]);
 }
