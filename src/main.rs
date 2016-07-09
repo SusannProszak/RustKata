@@ -2,20 +2,18 @@
 fn prime_factors(num: i32) -> Vec<i32> {
 
 	let mut prime_factors = Vec::new();
-	let mut n = num;
+	let mut num = num;
+	let mut candidate = 2;
 
-	if n > 1 {
-		while n % 2 == 0 {
-        	prime_factors.push(2);
-        	n = n / 2;
-    	}
-
-    	if n > 1 {
-        	prime_factors.push(n);
+	while num > 1 {
+        while num % candidate == 0 {
+            prime_factors.push(candidate);
+            num /= candidate;
         }
-	}
+        candidate += 1;
+    }
 
-	prime_factors
+    prime_factors
 }
 
 #[test]
