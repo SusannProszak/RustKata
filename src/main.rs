@@ -1,8 +1,18 @@
-fn prime_factors(num: i64) -> Vec<i64> {
-	match num {
-	    1 => vec![],
-	    _ => vec![num]
-	}
+
+fn prime_factors(num: i32) -> Vec<i32> {
+
+	let mut prime_factors = Vec::new();
+
+	if num % 2 == 0 && num > 2 {
+        prime_factors.push(2);
+        let n = num / 2;
+        if n > 1 {
+        	prime_factors.push(n)
+        }
+    } else if num > 1 {
+        prime_factors.push(num)
+    }
+	prime_factors
 }
 
 #[test]
